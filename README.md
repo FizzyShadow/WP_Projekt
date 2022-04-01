@@ -2,7 +2,7 @@
 
 Cilj ovg projekta je kreiranje webshhop stranice za Cvijećarnicu.
 
-  Registracija korsnika.
+  Registracija korsnika.\t
   Pretraživanje proizvoda.
   Admin ima mogućnost dodavanja i brisanja proizvoda.
   Postoji košarica za dodavanje proizvoda.
