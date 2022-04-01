@@ -11,6 +11,9 @@ Cilj ovg projekta je kreiranje webshhop stranice za Cvijećarnicu.
   
   Ciljane starije i mlađe osobe.
   Proizvodi za svadbe i pogrebene svrhe.
+  
+  Navigacija: Naslovnica, Trgovina, Kontakt, O nama
+    Unutar trgovine klikom na proizvod -> Detaljniji opis proizvoda
 
   #Alati i okruženje
 
