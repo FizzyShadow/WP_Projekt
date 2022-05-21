@@ -1,13 +1,11 @@
-
 const Home = () => {
     return (
-        <div className="home">
-            
-        </div>
+      <div className="flex justify-center h-screen">
+
+
+        
+      </div>
       );
 }
  
 export default Home;
-<div className="home">
-
-</div>

@@ -15,22 +15,21 @@ const NavigationBar = () => {
       }
     };
     return (
-        <div className='h-[100px] flex items-center justify-evenly p-4 z-[100] w-full bg-black/30 text-white absolute'>
+        <div className='flex h-[60px] items-center mx-[10%] mt-4 justify-between px-[30px] w-[80%] bg-[#5A2317]/70 text-white'>
             <Link to='/'>
-                <h1 className='text-red-500 text-4xl font-bold cursor-pointer'>
+                <h1 className='text-white/75 text-4xl font-bold cursor-pointer'>
                     Iris
                 </h1>
             </Link>
-            <div className='flex items-center justify-between'> 
-                <Link className='text-black pr-4 hover:text-red-400' to="/store">Trgovina</Link>
-                <Link className='text-black pr-4 hover:text-red-400' to="/contact">Kontakt</Link>
-                <Link className='text-black pr-4 hover:text-red-400' to="/info">O nama</Link>
+            <div className='flex items-center justify-between text-white font-bold text-base'> 
+                <Link className='pr-4 hover:text-red-400' to="/store">Trgovina</Link>
+                <Link className='pr-4 hover:text-red-400' to="/contact">Kontakt</Link>
                 {user?.email ? 
                 (
                     <div>
                         <div className='flex items-center justify-evenly'>
-                            <p className='text-black'>{user.email}</p>
-                            <button onClick={handleLogout} className='h-10 px-4 m-2 border py-2 text-black'>
+                            <p className=''>{user.email}</p>
+                            <button onClick={handleLogout} className='h-10 px-4 m-2 border py-2 '>
                                 Logout
                             </button>
                         </div>
@@ -39,8 +38,8 @@ const NavigationBar = () => {
                 :
                 (
                     <div>
-                        <Link className='text-black pr-4 hover:text-red-400' to="/signin">Sign In</Link>
-                        <Link className='text-black pr-4 hover:text-red-400' to="/signup">Sign Up</Link>
+                        <Link className='pr-4 hover:text-red-400' to="/signin">Sign In</Link>
+                        <Link className='pr-4 hover:text-red-400' to="/signup">Sign Up</Link>
                     </div>
                 )}
             </div>

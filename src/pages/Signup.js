@@ -47,7 +47,7 @@ const handleSubmit = async (e) => {
                 <button className='bg-red-600 py-3 my-6 rounded font-bold'>
                   Sign Up
                 </button>
-                <div className='flex justify-between items-center text-sm text-gray-600'>
+                <div className='flex justify-between items-center text-sm text-white/90'>
                   <p>
                     <input className='mr-2' type='checkbox' />
                     Remember me
@@ -55,7 +55,7 @@ const handleSubmit = async (e) => {
                   <p>Need Help?</p>
                 </div>
                 <p className='py-8'>
-                <span className='text-gray-600'>Already have an account?</span>{' '}
+                <span className='text-white/90'>Already have an account?</span>{' '}
                 <Link to='/signin'>Sign In</Link>
                 </p>
               </form>

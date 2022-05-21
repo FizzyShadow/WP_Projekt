@@ -46,7 +46,7 @@ const Signin = () => {
               <button className='bg-red-600 py-3 my-6 rounded font-bold'>
                 Sign In
               </button>
-              <div className='flex justify-between items-center text-sm text-gray-600'>
+              <div className='flex justify-between items-center text-sm text-white/90'>
                 <p>
                   <input className='mr-2' type='checkbox' />
                   Remember me
@@ -54,7 +54,7 @@ const Signin = () => {
                 <p>Need Help?</p>
               </div>
               <p className='py-8'>
-                <span className='text-gray-600'>New to Iris?</span>{' '}
+                <span className='text-white/90'>New to Iris?</span>{' '}
                 <Link to='/signup'>Sign Up</Link>
               </p>
             </form>

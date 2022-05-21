@@ -2,21 +2,28 @@ import NavigationBar from './components/NavigationBar';
 import Home from './pages/HomePage';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
+import Store from './pages/Store';
+import ContactPage from './pages/ContactPage';
 import Account from './pages/Account';
 import { Route, Routes } from 'react-router-dom';
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import Footer from './components/Footer';
 
 
 function App() {
 
   return (
-    <div className="Iris">
+    <div className="columns-1 bg-fixed bg-[url('images/bg_00.jpg')] bg-cover">
+      
       <AuthContextProvider>
+        
         <NavigationBar/>
         <Routes>
 
           <Route path='/' element={<Home />} />
+          <Route path='/store' element={<Store />} />
+          <Route path='/contact' element={<ContactPage />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />
           <Route
@@ -29,6 +36,7 @@ function App() {
           />
 
         </Routes>
+        <Footer/>
       </AuthContextProvider>
         
      
