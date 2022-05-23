@@ -72,7 +72,7 @@ export class CategoryCheckBox extends Component {
          />
          <p className={`text-xl font-semibold uppercase text-white/90 `}>{categorys[3]}</p>
      </div>
-     {console.log(this.state.selectedOption)}
+     
     </div>
     
     );
