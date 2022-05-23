@@ -9,12 +9,13 @@ import { Route, Routes } from 'react-router-dom';
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Footer from './components/Footer';
+import { ProductInfoPage } from './pages/ProductInfoPage';
 
 
 function App() {
 
   return (
-    <div className="columns-1 bg-fixed bg-[url('images/bg_00.jpg')] bg-cover">
+    <div className="bg-fixed bg-[url('images/bg_00.jpg')] bg-cover grid">
       
       <AuthContextProvider>
         
@@ -26,6 +27,7 @@ function App() {
           <Route path='/contact' element={<ContactPage />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/productInfo' element={<ProductInfoPage />} />
           <Route
             path='/account'
             element={
