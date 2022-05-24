@@ -10,6 +10,7 @@ import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Footer from './components/Footer';
 import { ProductInfoPage } from './pages/ProductInfoPage';
+import { ShoppingCartPage } from './pages/ShoppingCartPage';
 
 
 function App() {
@@ -27,9 +28,10 @@ function App() {
           <Route path='/contact' element={<ContactPage />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/shopCart' element={<ShoppingCartPage />} />
           <Route path='/productInfo/:id' element={<ProductInfoPage />} />
           <Route
-            path='/account'
+            path='/account/'
             element={
               <ProtectedRoute>
                 <Account />

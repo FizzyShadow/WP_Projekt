@@ -1,6 +1,7 @@
 import { Product } from "../components/Product";
 import { CategoryCheckBox } from "../components/CategoryCheckBox";
 import { ProductProvider } from "../context/DatabaseContext";
+import { CartItemProvider } from "../context/CartItemContext";
 
 const Store = () => {
     return (
@@ -11,7 +12,9 @@ const Store = () => {
           </div>
           <div className="basis-[80%]">
             <div className='flex justify-center items-center flex-wrap'>
-            <Product></Product>
+            <CartItemProvider>
+              <Product></Product>
+            </CartItemProvider>
             </div>
           </div>
         </div>

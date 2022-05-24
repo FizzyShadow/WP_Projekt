@@ -25,10 +25,11 @@ export const RowOfItemas = () => {
             {products.map((product) => (
                 <div className='w-[300px] h-auto m-5 justify-start items-start text-xs font-semibold text-center inline-block shadow-2xl relative 'key={product.uuid}>
                 <div className='w-[100%] h-[200px]'>
-                
-                    <Link  to="/productInfo">
-                        <img class ="object-fill h-[100%] w-[100%] brightness-90" src={product.flower.photo} alt="404 Not found"/>
-                    </Link>
+                      <Link to={`/productInfo/${product.uuid}`} state={{
+                          item: product,
+                      }}>
+                      <img class ="object-fill h-[100%] w-[100%] brightness-90" src={product.flower.photo} alt="404 Not found"/>
+                      </Link>
                     <div className='absolute w-[100%] mt-0 text-[#ffffff] inset-y-[170px] text-lg font-bold'>
                         {product.flower.name}
                     </div>

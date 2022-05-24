@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa';
+import { ShopingCartPage } from '../pages/ShoppingCartPage';
 
 const NavigationBar = () => {
     const { user, logout } = UserAuth();
@@ -22,6 +24,7 @@ const NavigationBar = () => {
                 </h1>
             </Link>
             <div className='flex items-center justify-between text-white font-bold text-base'> 
+                
                 <Link className='pr-4 hover:text-red-400' to="/store">Trgovina</Link>
                 <Link className='pr-4 hover:text-red-400' to="/contact">Kontakt</Link>
                 {user?.email ? 
@@ -29,9 +32,14 @@ const NavigationBar = () => {
                     <div>
                         <div className='flex items-center justify-evenly'>
                             <p className=''>{user.email}</p>
-                            <button onClick={handleLogout} className='h-10 px-4 m-2 border py-2 '>
+                            <Link to='/shopCart'>
+                            <FaShoppingCart className='cursor-pointer mx-3 text-2xl z-[10] text-[#fff]/90' />
+                            </Link>
+                            <button onClick={handleLogout} className='h-10 px-5 m-2 border py-2 '>
                                 Logout
                             </button>
+                            
+                            
                         </div>
                     </div>
                 )
