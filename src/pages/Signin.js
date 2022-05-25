@@ -22,7 +22,7 @@ const Signin = () => {
   };
 
   return (
-    <div className='w-full h-screen'>
+    <div className='w-full min-h-screen'>
      <div className='fixed w-full px-4 py-36 z-50'>
       <div className='max-w-[450px] h-[500px] mx-auto bg-black/30 text-white'>
           <div className='max-w-[320px] mx-auto py-16'>

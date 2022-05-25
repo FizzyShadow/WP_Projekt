@@ -27,7 +27,6 @@ export const ProductProvider = (props) => {
         }
       });
     }, []);
-  
  
     const writeToDatabase = () => {
       const uuid = uid();
@@ -63,7 +62,7 @@ export const ProductProvider = (props) => {
 
   return (
     <>
-        <ProductContext.Provider value={[products, setProducts]}>
+        <ProductContext.Provider value={[products]}>
             {props.children}      
         </ProductContext.Provider> 
     </>

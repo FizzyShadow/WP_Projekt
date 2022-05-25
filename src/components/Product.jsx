@@ -5,12 +5,11 @@ import { CartItemContext } from "../context/CartItemContext";
 
 export const Product = () => {
 
-   const [products, setProducts] = useContext(ProductContext);
-   const {cartItems, onAdd } = useContext(CartItemContext);
+   const [products] = useContext(ProductContext);
+   const { onAdd } = useContext(CartItemContext);
 
   return (
     <>
-      
         {products.length === 0 && <div class>slow internet...no products to display</div>}
         {products.map(product => (
             <div className='w-[300px] h-auto m-5 justify-start items-start text-xs font-semibold text-center shadow-2xl relative 'key={product.uuid}>

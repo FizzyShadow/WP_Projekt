@@ -3,7 +3,7 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 import { ProductContext } from '../context/DatabaseContext';
 import { Link } from 'react-router-dom';
 
-export const RowOfItemas = () => {
+export const ProductRow = () => {
 
     const [products, setProducts] = useContext(ProductContext);
 
@@ -21,7 +21,7 @@ export const RowOfItemas = () => {
             <h2 className='text-white font-semibold md:text-2xl uppercase p-4'> Products </h2>
             <FaArrowAltCircleLeft className='absolute cursor-pointer text-4xl top-[100%] mt-[3%] left-[3%] z-[10] text-[#5A2317]/90' onClick={prevSlide} />
             <FaArrowAltCircleRight className='absolute cursor-pointer text-4xl top-[100%] mt-[3%] right-[3%] z-[10] text-[#5A2317]/90' onClick={nextSlide} />
-            <div id={'slider'} className='w-full h-full overflow-x-hidden whitespace-nowrap scroll-smooth scrollbar-hide relative'>
+            <div id={'slider'} className='w-full h-full overflow-x-hidden whitespace-nowrap scroll-smooth scrollbar-hidden relative'>
             {products.map((product) => (
                 <div className='w-[300px] h-auto m-5 justify-start items-start text-xs font-semibold text-center inline-block shadow-2xl relative 'key={product.uuid}>
                 <div className='w-[100%] h-[200px]'>

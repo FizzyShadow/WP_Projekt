@@ -1,8 +1,7 @@
-import React, {Component, useState} from "react";
+import React, {Component} from "react";
 import { categorys } from "./globalValues";
 
 export class CategoryCheckBox extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -35,7 +34,7 @@ export class CategoryCheckBox extends Component {
            value={categorys[0]}
            checked={this.state.selectedOption === categorys[0]}
            onChange={this.onValueChange}
-           className="h-4 w-4 ml-4"
+           className="ml-4"
          />
          <p className={`text-xl font-semibold uppercase text-white/90 `}>{categorys[0]}</p>
      </div>
@@ -46,7 +45,7 @@ export class CategoryCheckBox extends Component {
               value={categorys[1]}
               checked={this.state.selectedOption === categorys[1]}
               onChange={this.onValueChange}
-              className="h-4 w-4 ml-4"
+              className="ml-4"
             />
             <p className={`text-xl font-semibold uppercase text-white/90 `}>{categorys[1]}</p>
         </div>
@@ -57,7 +56,7 @@ export class CategoryCheckBox extends Component {
            value={categorys[2]}
            checked={this.state.selectedOption === categorys[2]}
            onChange={this.onValueChange}
-           className="h-4 w-4 ml-4"
+           className="ml-4"
          />
          <p className={`text-xl font-semibold uppercase text-white/90 `}>{categorys[2]}</p>
      </div>
@@ -68,7 +67,7 @@ export class CategoryCheckBox extends Component {
            value={categorys[3]}
            checked={this.state.selectedOption === categorys[3]}
            onChange={this.onValueChange}
-           className="h-4 w-4 ml-4"
+           className="ml-4"
          />
          <p className={`text-xl font-semibold uppercase text-white/90 `}>{categorys[3]}</p>
      </div>

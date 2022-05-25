@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React from 'react'
 import { ProductInformation } from '../components/ProductInformation'
 import { ProductProvider } from '../context/DatabaseContext'
 import { useParams, useLocation } from 'react-router-dom'
@@ -12,7 +12,7 @@ export const ProductInfoPage = (props) => {
 
     return(
         <>
-            <div className="h-screen">
+            <div className="min-h-screen">
               <ProductProvider>
                 <CartItemProvider>
                     <ProductInformation value={property}></ProductInformation>

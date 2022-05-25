@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { createContext } from "react";
 import {useLocalStorage} from '../hooks/LocalStorage';
 
 export const CartItemContext = createContext();
@@ -34,7 +34,7 @@ export const CartItemProvider = ({children}) => {
     
   return (
     <> 
-        <CartItemContext.Provider value={{cartItems, onAdd }}>
+        <CartItemContext.Provider value={{cartItems, onAdd, onRemove }}>
             {children}      
         </CartItemContext.Provider> 
     </>
