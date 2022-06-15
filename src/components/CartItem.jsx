@@ -33,9 +33,16 @@ export const CartItem = () => {
                     
             </div>
         ))}
-        <div className=" bg-[#060606]/20 mx-[15%] md:text-xs font-bold lg:text-base flex mt-[20px] justify-center md:h-[20px] lg:h-[40px] w-[15%] mb-5">
-            <div className="text-white/90 m-2">
-                <div>Total: {totalPrice.toFixed(2)} $ </div>
+        <div className="flex justify-between">
+            <div className=" bg-[#060606]/20 mx-[15%] md:text-xs font-bold lg:text-base flex mt-[20px] justify-center md:h-[20px] lg:h-[40px] w-[15%] mb-5">
+                <div className="text-white/90 m-2">
+                    <div>Total: {totalPrice.toFixed(2)} $ </div>
+                </div>
+            </div>
+            <div className=" bg-[#060606]/20 mx-[15%] md:text-xs font-bold lg:text-base flex mt-[20px] justify-center md:h-[20px] lg:h-[40px] w-[15%] mb-5 cursor-pointer hover:bg-[#060606]/60">
+                <div className="text-white/90 m-2">
+                    <div>CHECKOUT</div>
+                </div>
             </div>
         </div>
         </>

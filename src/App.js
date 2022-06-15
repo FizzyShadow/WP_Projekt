@@ -11,13 +11,18 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Footer from './components/Footer';
 import { ProductInfoPage } from './pages/ProductInfoPage';
 import { ShoppingCartPage } from './pages/ShoppingCartPage';
+import { useEffect } from 'react';
 
 
 function App() {
 
+  useEffect(() => {
+    document.title = "Iris"
+  }, [])
+
   return (
     <div className="bg-fixed bg-[url('images/bg_00.jpg')] bg-cover grid">
-      
+     
       <AuthContextProvider>
         
         <NavigationBar/>

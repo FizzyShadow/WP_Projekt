@@ -30,6 +30,7 @@ export const Product = () => {
                 </div>
             
                 <button onClick={() => onAdd(product)} className='bg-[#5A2317]/80 hover:bg-slate-600 text-[#ffffff] text-center font-bold text-base border-hidden cursor-pointer w-[100%] h-[30px] outline-none' >ADD TO CART</button>
+                
             
             </div>
         ))}

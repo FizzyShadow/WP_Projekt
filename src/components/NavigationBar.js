@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
+import SearchBar from './SearchBar';
 
 const NavigationBar = () => {
     const { user, logout } = UserAuth();
@@ -23,7 +24,7 @@ const NavigationBar = () => {
                 </h1>
             </Link>
             <div className='flex items-center justify-between text-white font-bold text-base'> 
-                
+                <SearchBar/>
                 <Link className='pr-4 hover:text-red-400' to="/store">Trgovina</Link>
                 <Link className='pr-4 hover:text-red-400' to="/contact">Kontakt</Link>
                 {user?.email ? 
