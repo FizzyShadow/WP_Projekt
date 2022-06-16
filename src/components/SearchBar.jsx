@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 function SearchBar({ placeholder, data }) {
   
@@ -17,7 +18,7 @@ function SearchBar({ placeholder, data }) {
           let flowerName = responseData[key].flower.name.toLowerCase();
           if(flowerName.slice(0, searchQuery.length).indexOf(searchQuery) !== -1){
             setResult(prevResult => {
-              return [...prevResult, responseData[key].flower.name]
+              return [...prevResult, responseData[key]]
             })
           }
         }
@@ -43,7 +44,15 @@ function SearchBar({ placeholder, data }) {
     </div>
     <div className="fixed z-10">
       {result.map((result,index) =>{
-        return <div className="bg-[#5A2317]/70 w-full flex align-center h-8 shadow-lg my-1 rounded px-3 pt-1 overflow-hidden overflow-y-auto shadow-black-500/50"> {result} </div>
+        return ( 
+        <div className="bg-[#5A2317]/70 w-full h-[40px] justify-left flex align-center shadow-lg my-1 rounded px-3 pt-1 overflow-hidden overflow-y-auto shadow-black-500/50"> 
+            <Link className="flex" to={`/productInfo/${result.uuid}`} state={{
+                  item: result,
+              }}>
+              <img class ="object-fill pr-3 h-[30px] w-[50px] brightness-90" src={result.flower.photo} alt="404 Not found"/>
+              <p> {result.flower.name} </p>
+            </Link>
+        </div>)
       })}
     </div>
   </div>

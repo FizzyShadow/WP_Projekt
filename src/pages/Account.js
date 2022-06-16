@@ -5,7 +5,10 @@ const Account = () => {
   
 
   return (
-    <div></div>
+    <div className='h-screen'>
+
+
+    </div>
   );
 };
 
